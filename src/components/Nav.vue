@@ -9,32 +9,10 @@ const isMenuOpen = ref(false);
   <nav class="bg-gray-900 f w-full z-50">
     <div class="container mx-auto flex items-center justify-between p-4">
       <a class="text-white text-lg font-bold" href="#">Navbar Fixe</a>
-      <button
-        class="text-white block md:hidden focus:outline-none"
-        type="button"
-        @click="isMenuOpen = !isMenuOpen"
-        aria-controls="navbarCollapse"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <svg
-          class="h-6 w-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16m-7 6h7"
-          ></path>
-        </svg>
-      </button>
+
       <div
         :class="{ 'hidden md:flex': !isMenuOpen }"
-        class="w-full md:w-auto md:flex-grow"
+        class="w-full md:w-auto md:flex-grow md:flex"
       >
         <ul
           class="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4"
@@ -58,6 +36,29 @@ const isMenuOpen = ref(false);
           </button>
         </form>
       </div>
+      <button
+        class="text-white block md:hidden focus:outline-none"
+        type="button"
+        @click="isMenuOpen = !isMenuOpen"
+        aria-controls="navbarCollapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <svg
+          class="h-6 w-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          ></path>
+        </svg>
+      </button>
     </div>
   </nav>
 </template>
